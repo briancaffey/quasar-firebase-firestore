@@ -1,4 +1,4 @@
-# Quasar Application v1-beta template
+# Quasar Application v1-beta Firebase & Firestore Template
 
 > A template for firebase & cloud firestore integration: **WIP as of 16 FEB 2019**
 
