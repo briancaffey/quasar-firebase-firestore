@@ -84,7 +84,7 @@
 </template>
 
 <script>
-import customFooter from '../components/customFooter'
+import customFooter from '../components/CustomFooter'
 import { openURL } from 'quasar'
 import userMenu from '../components/UserMenu.vue'
 
