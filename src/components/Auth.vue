@@ -66,6 +66,8 @@ import { delayTouch } from '../utils/utilFunctions.js'
 
 export default {
   name: 'Auth',
+  // Top level prop in our options object to set and hold our
+  // timer for our validations
   touchMap: new WeakMap(),
   computed: {
     isRegisterUser () {
@@ -103,10 +105,10 @@ export default {
           this.loading = false
           this.resetFormFields()
           this.$router.push('/user')
-          console.log('SUCCESS: NEW USER', user)
+          console.log('SUCCESS:', user)
         })
         .catch((error) => {
-          console.error('FAILURE: NEW USER', error)
+          console.error('FAILURE:', error)
           this.loading = false
         })
     },

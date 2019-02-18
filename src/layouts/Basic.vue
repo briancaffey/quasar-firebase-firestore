@@ -58,14 +58,4 @@ export default {
 </script>
 
 <style lang='stylus'>
-  .quasar-gcp
-    &--template-header-font
-      font-weight bold
-      a
-        text-decoration none
-
-  .quasar-gcp--template-header-font,
-  .quasar-footer
-      a
-        color #fff
 </style>

@@ -1,3 +1,7 @@
+// Pull in the route names as constants
+// to prevent magic string issues
+import routeNames from './routeNames'
+let authRoutes = routeNames.authRoutes.AUTH
 
 const routes = [
   {
@@ -17,7 +21,7 @@ const routes = [
     children: [
       {
         name: 'Login',
-        path: '/login',
+        path: authRoutes.LOGIN,
         component: () => import('components/Auth.vue')
       }
     ]
@@ -28,7 +32,7 @@ const routes = [
     children: [
       {
         name: 'Register',
-        path: '/register',
+        path: authRoutes.REGISTER,
         component: () => import('components/Auth.vue')
       }
     ]
@@ -39,7 +43,7 @@ const routes = [
     children: [
       {
         name: 'User',
-        path: '/user',
+        path: authRoutes.USER,
         component: () => import('components/Dashboard.vue'),
         meta: {
           requiresAuth: true

@@ -91,9 +91,6 @@ import userMenu from '../components/UserMenu.vue'
 
 export default {
   name: 'Main',
-  created () {
-    console.log(this.isCurrentUser)
-  },
   components: {
     userMenu
   },
@@ -117,10 +114,4 @@ export default {
 </script>
 
 <style lang='stylus'>
-  .quasar-gcp
-    &--template-header-font
-      font-weight bold
-      a
-        color #fff!important
-        text-decoration none
 </style>
