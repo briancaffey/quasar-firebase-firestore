@@ -1,35 +1,44 @@
 <template>
   <q-page class="q-pa-md">
     <h6 class="q-my-sm">Welcome Fellow Quasarian!</h6>
-    <p class="text-body1">This is a Quasar template designed to show you how to implement Goggle's Firebase, and Cloud Firestore. In order to use this template effectively you will need to have a firebase account. If you do not have one head over to the <a class='highlight-link' href="https://firebase.google.com/" target="blank">firebase setup</a>, and get yourself and account so we can proceed.</p>
 
-    <p class="text-body1">Once you have an account with firebase you're going to need to set up a new project in the firebase console so we can link your front end project in quasar with the firebase services api.[INSERT IMAGE]</p>
+    <p class="text-body1">This is a Quasar template designed to show you how to implement Goggle's Firebase, and Cloud Firestore within the Quasar v1-beta framework. Below you will find common instructions on setting up to Google's Firebase SDK, authentication for creating new users and logging them in, connecting to a Cloud Firestore Database, and some explination around common issue when dealing with routing and authenticated users in Quasar using the Firebase SDK.</p>
 
-    <p class="text-body1">Now that we have a new project registered in your firebase console it time to get started. First lets get some authentication going via a user's email. Click on the <em>Authentication</em> item in the left navigation pane. Once there click on the <em>Sign-in method</em> tab in the main screen section.</p>
+    <p class="text-body1 text-bold">Other features to note:</p>
+    <q-list dense>
+      <q-item>- Vuelidate for form validation</q-item>
+      <q-item>- Quasar's New App Extension Featuring -- DotEnv</q-item>
+      <q-item>- Data Table with expansion fields, and crud operations on our data (coming soon!)</q-item>
+    </q-list>
 
-    <p class="text-body1">For this template we are only going to focus on the email sign in method. We'll also allow the user to be registered once they provide a valid email and password. At this point there is no need to validate the user's email as this requires an additional application to do the validation through the firebase email sdk api. (Medium article coming soon!)</p>
-
-    <p class="text-body1">Hover over the <em>Email/Password</em> row, and click on the pencil [INSERT IMAGE] icon to enable email for the sign in method for the authentication method</p>
-    <p class="text-body1">Now that we have a methode to set up a user, click on the menu item in the upper right corner of this template [INSERT IMAGE], and click on <em>Register New User</em></p>
-
-    <p class="text-body1">
-      Usefull Links:
-      <q-list>
-        <q-item>
-          <a href="https://stackoverflow.com/questions/37482366/is-it-safe-to-expose-firebase-apikey-to-the-public" target="blank">API keys security</a>
-        </q-item>
-      </q-list>
-
-    </p>
-
+    <q-list bordered class="rounded-borders">
+        <firebaseSetup></firebaseSetup>
+        <q-separator />
+        <authenticationSetup></authenticationSetup>
+        <q-separator />
+        <firestoreConnection></firestoreConnection>
+        <q-separator />
+        <commonIssues></commonIssues>
+    </q-list>
   </q-page>
 </template>
 
 <script>
+import authenticationSetup from '../components/instructionModules/AuthenticationSetup.vue'
+import firebaseSetup from '../components/instructionModules/FirebaseSetup.vue'
+import firestoreConnection from '../components//instructionModules/FirestoreConnection.vue'
+import commonIssues from '../components//instructionModules/CommonIssues.vue'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    authenticationSetup,
+    commonIssues,
+    firebaseSetup,
+    firestoreConnection
+  }
 }
 </script>
 
-<style lang='stylus'>
+<style>
 </style>

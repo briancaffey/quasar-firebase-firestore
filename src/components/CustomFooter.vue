@@ -1,6 +1,6 @@
 <template>
   <q-footer class="q-pa-md quasar-footer">
-    ©2019 Quasar Framework in asscotiation with <a href="https://kpapro.com" target="blank">KPA Productions L.L.C.</a>
+    ©2019 Quasar Framework in asscotiation with KPA Productions L.L.C.
   </q-footer>
 </template>
 
