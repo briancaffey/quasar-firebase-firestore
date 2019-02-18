@@ -30,20 +30,19 @@
       <!-- This is where pages get injected -->
       <router-view />
     </q-page-container>
-
-    <q-footer class="q-pa-md quasar-footer">
-      ©2019 Quasar Framework in asscotiation with <a href="https://kpapro.com" target="blank">KPA Productions L.L.C.</a>
-    </q-footer>
+    <customFooter></customFooter>
   </q-layout>
 </template>
 
 <script>
+import customFooter from '../components/CustomFooter.vue'
 import { openURL } from 'quasar'
 import userMenu from '../components/UserMenu.vue'
 
 export default {
   name: 'Basic',
   components: {
+    customFooter,
     userMenu
   },
   data () {

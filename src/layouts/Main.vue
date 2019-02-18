@@ -79,19 +79,19 @@
     <q-page-container>
         <router-view />
     </q-page-container>
-    <q-footer class="q-pa-md quasar-footer">
-      ©2019 Quasar Framework in asscotiation with <a href="https://kpapro.com" target="blank">KPA Productions L.L.C.</a>
-    </q-footer>
+    <customFooter></customFooter>
   </q-layout>
 </template>
 
 <script>
+import customFooter from '../components/customFooter'
 import { openURL } from 'quasar'
 import userMenu from '../components/UserMenu.vue'
 
 export default {
   name: 'Main',
   components: {
+    customFooter,
     userMenu
   },
   computed: {
