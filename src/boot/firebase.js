@@ -11,30 +11,35 @@ export default ({ app, router, Vue }) => {
   const currentConfig = process.env.firebaseConfig
   firebase.initializeApp(currentConfig)
 
+  // Add auth methods to our Vue instance
+  Vue.prototype.$login = (email, password) => {
+    return new Promise((resolve, reject) => {
+      firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((user) => {
+          resolve(user)
+        })
+        .catch(error => {
+          reject(error)
+        })
+    })
+  }
+
+  Vue.prototype.$registerUser = (email, password) => {
+    return new Promise((resolve, reject) => {
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((user) => {
+          resolve(user)
+        })
+        .catch(error => {
+          reject(error)
+        })
+    })
+  }
+
   // Initialize Cloud Firestore through Firebase
   const firestore = firebase.firestore()
 
-  // Load the Vue route guard into memory and
-  // wait for the onAuthStateChanged method to complete.
-  // This will prevent the app from rendering before firebase has a chance
-  // to finish its auth process, and allow it to check if a current authorized
-  // user is set
-  router.beforeEach((to, from, next) => {
-    // Temporary route guard incase developer
-    // has not set their firebase configs
-    if (currentConfig.apiKey === '') next()
-    firebase.auth().onAuthStateChanged(() => {
-      const currentUser = firebase.auth().currentUser
-      const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
-
-      if (requiresAuth && !currentUser) next('login')
-      else if (to.path === '/login' && (!requiresAuth && currentUser)) next('user')
-      else if (to.path === '/register' && (!requiresAuth && currentUser)) next('user')
-      else next()
-    })
-  })
-
-  // Add prototype props to our Vue instance for easy access
+  // Add props to our Vue instance for easy access
   // in our app
   Vue.prototype.$fb = firebase
   Vue.prototype.$db = firestore

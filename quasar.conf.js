@@ -6,7 +6,8 @@ module.exports = function (ctx) {
     // --> boot files are part of "main.js"
     boot: [
       'firebase',
-      'vuelidate'
+      'vuelidate',
+      'routeGuard'
     ],
 
     css: [

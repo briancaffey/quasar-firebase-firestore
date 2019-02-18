@@ -61,7 +61,6 @@
 
 <script>
 import { required, email, sameAs } from 'vuelidate/lib/validators'
-import { registerUser, login } from '../utils/authFunctions.js'
 import { delayTouch } from '../utils/utilFunctions.js'
 
 export default {
@@ -109,6 +108,11 @@ export default {
         })
         .catch((error) => {
           console.error('FAILURE:', error)
+          this.$q.notify({
+            classes: 'text-weight-bold text-center',
+            color: 'negative',
+            message: `Looks like there is an issue: ${error.message}`
+          })
           this.loading = false
         })
     },
@@ -141,9 +145,10 @@ export default {
       }
     },
     performAuthentication () {
+      debugger
       return this.isRegisterUser
-        ? registerUser(this.email, this.password, this)
-        : login(this.email, this.password, this)
+        ? this.$registerUser(this.email, this.password)
+        : this.$login(this.email, this.password)
     },
     resetFormFields () {
       this.email = ''
