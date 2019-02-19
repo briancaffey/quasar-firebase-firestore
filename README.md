@@ -1,6 +1,6 @@
-# Quasar Application v1-beta Firebase & Firestore Template
+# Quasar Application v1-beta Firebase & Firestore
 
-> A template for firebase & cloud firestore integration: **WIP as of 19 FEB 2019**
+> An opinionated example for firebase & cloud firestore integration: **WIP as of 19 FEB 2019**
 
 > Please note, that in order for this repo to work you must register a new project in the firebase console, and then follow the instructions in the repo to add Quasar's DotEnv app extension, and create your .env files accordingly.
 
