@@ -4,7 +4,9 @@
 
 > Please note, that in order for this repo to work you must register a new project in the firebase console, and then follow the instructions in the repo to add Quasar's DotEnv app extension, and create your .env files accordingly.
 
-> If you do not register a project and implement your key you will see the index page render, but all subsequent functionality will not work and you will see an error in the console.
+> If you do not register a project and implement your key you will see the index page render, but all subsequent functionality will not work and you will see an error in the console. This is what you'll see in your console.
+
+![Console Error](src/statics/consoleError.jpg?raw=true "Console Error")
 
 Clone this repo:
 
@@ -14,7 +16,7 @@ Clone this repo:
 
 `$ yarn`
 
-The application should launch on localhost:8080, and from there just start following the instuctions. If you're mostly familiar with Quasar & Firebase, just be sure to follow the instructions in the firebase setup for the use of the new Quasar app extension so you can implement your .env file with you Firebase API keys properly. Then after that feel free to poke around. Again, this is a WIP so there will be some discrepancies. I'll keep updating this over the next week.
+The application should launch on localhost:8080, and from there just start following the instructions. If you're mostly familiar with Quasar & Firebase, just be sure to follow the instructions in the firebase setup for the use of the new Quasar app extension so you can implement your .env file with you Firebase API keys properly. Then after that feel free to poke around. Again, this is a WIP so there will be some discrepancies. I'll keep updating this over the next week.
 
  Features for this repo include:
 

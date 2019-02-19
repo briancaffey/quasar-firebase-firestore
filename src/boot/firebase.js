@@ -11,7 +11,6 @@ export default ({ app, router, Vue }) => {
   const currentConfig = process.env.firebaseConfig
 
   // Make sure the firebase keys have been set accordingly
-  debugger
   if (currentConfig) {
     firebase.initializeApp(currentConfig)
     // Initialize Cloud Firestore through Firebase
