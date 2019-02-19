@@ -10,6 +10,7 @@ export default ({ app, router, Vue }) => {
   // Initialize app
   const currentConfig = process.env.firebaseConfig
 
+  console.log('PROCESS ENV OBJECT', process.env)
   // Make sure the firebase keys have been set accordingly
   if (currentConfig) {
     firebase.initializeApp(currentConfig)
