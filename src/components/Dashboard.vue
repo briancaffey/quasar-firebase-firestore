@@ -41,7 +41,6 @@
             label="Scope Of Work"
             type="textarea"
             v-model="scopeOfWork"
-            @keyup.enter="addNewProject()"
           ></q-input>
           <div class="flex justify-end q-mt-md">
             <q-btn
@@ -73,8 +72,8 @@ export default {
     return {
       loading: false,
       pointOfContact: '',
-      projectName: '',
       projects: [],
+      projectName: '',
       scopeOfWork: ''
     }
   },
@@ -87,14 +86,6 @@ export default {
     addNewProject () {
       this.loading = true
       this.addNewProjectCollection()
-    },
-    addNewProjectCollection () {
-      const projectsRef = this.$db.collection('projects')
-      projectsRef.add({
-        projectName: this.projectName,
-        pointOfContact: this.pointOfContact,
-        scopeOfWork: this.scopeOfWork
-      })
         .then((docRef) => {
           this.$q.notify({
             classes: 'text-weight-bold text-center',
@@ -111,6 +102,14 @@ export default {
           })
           this.loading = false
         })
+    },
+    addNewProjectCollection () {
+      const projectsRef = this.$db.collection('projects')
+      return projectsRef.add({
+        projectName: this.projectName,
+        pointOfContact: this.pointOfContact,
+        scopeOfWork: this.scopeOfWork
+      })
     },
     resetForm () {
       this.pointOfContact = ''

@@ -9,7 +9,19 @@ export default ({ app, router, Vue }) => {
 
   // Initialize app
   const currentConfig = process.env.firebaseConfig
-  firebase.initializeApp(currentConfig)
+
+  // Make sure the firebase keys have been set accordingly
+  debugger
+  if (currentConfig) {
+    firebase.initializeApp(currentConfig)
+    // Initialize Cloud Firestore through Firebase
+    const firestore = firebase.firestore()
+
+    // Add props to our Vue instance for easy access
+    // in our app
+    Vue.prototype.$fb = firebase
+    Vue.prototype.$db = firestore
+  }
 
   // Add auth methods to our Vue instance
   Vue.prototype.$login = (email, password) => {
@@ -35,12 +47,4 @@ export default ({ app, router, Vue }) => {
         })
     })
   }
-
-  // Initialize Cloud Firestore through Firebase
-  const firestore = firebase.firestore()
-
-  // Add props to our Vue instance for easy access
-  // in our app
-  Vue.prototype.$fb = firebase
-  Vue.prototype.$db = firestore
 }

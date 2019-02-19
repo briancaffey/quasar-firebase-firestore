@@ -1,6 +1,8 @@
 <template>
   <q-expansion-item
     expand-separator
+    group="instructions"
+    header-class="bg-primary"
     label="COMMON FIREBASE SETUP INSTRUCTIONS"
   >
     <q-card>
@@ -9,11 +11,11 @@
 
         <p class="text-body1">Once you have an account with firebase you're going to need to set up a new project in the firebase console so we can link your frontend project in Quasar with the Firebase SDK. <img class="q-my-md" src="statics/projectSetup.jpg" alt="Project Setup" /></p>
 
-        <p class="text-body1">Next you'll need to get your API key by clicking on the web icon. This will launch a modal with API keys that you'll need to make the connection between your app and Firebase <img class="q-my-md" src="statics/webAPIIcon.jpg" alt="Web Icon API"/>. Copy and paste from the "apiKey" to the end of the value in "messagingSenderId".</p>
+        <p class="text-body1">Next you'll need to get your API key by clicking on the web icon. This will launch a modal with API keys that you'll need to make the connection between your app and Firebase. Copy and paste from the "apiKey" to the end of the value in "messagingSenderId".</p><img class="q-my-md" src="statics/webAPIIcon.jpg" alt="Web Icon API"/>
 
-        <p class="text-body1">Now that we have the api key, this is a good time to use the new Quasar app extension DotEnv, which is a new feature that is in Quasar v1. Extension are added to projects by running the command: <pre class="bash">$ quasar ext --add @quasar/dotenv</pre> Follow the prompts, and when the last prompt entited: "Name of your Common Root Object", be sure to name it "firebaseConfig". This will be the object that is stored in <em>process.env object</em> and will be loaded into Fireabse's initializeApp method. (/src/boot/firebase.js:12) If you're curious about the Quasar App Extension feature(s) please have a read. (Medium article to soon be released)</p>
+        <p class="text-body1">Now that we have the api key, this is a good time to use the new Quasar app extension DotEnv, which is a new feature that is in Quasar v1. We are going to be using the Quasar extension -- <em>DotEnv</em> So run this command in your shell: <pre class="bash">$ quasar ext --add @quasar/dotenv</pre> Follow the prompts, and when the last prompt entited: "Name of your Common Root Object", be sure to name it "firebaseConfig". This will be the object that is stored in <em>process.env object</em> and will be loaded into Fireabse's initializeApp method. (/src/boot/firebase.js:12) If you're curious about the Quasar App Extension feature(s) please have a read. (Medium article to soon be released)</p>
 
-        <p class="text-body1">Be sure to create the two files that you specified during the prompts. I named mine ".env.dev", and ".env.prod". Once these files are created paste the API keys from the Firebase console into those files. Be sure to remove all spaces, colons, and commas. It should look like this: <img class="q-my-md" src="statics/envFile.jpg" alt="Environment File" />></p>
+        <p class="text-body1">Be sure to create the two files that you specified during the prompts. I named mine ".env.dev", and ".env.prod". Once these files are created paste the API keys from the Firebase console into those files. Be sure to remove all spaces, colons, and commas. It should look like this: <img class="q-my-md" src="statics/envFile.jpg" alt="Environment File" /></p>
 
         <p class="text-body1">Now click on the <em>Authentication</em> link in the left navigation pane. Once there click on the <em>Sign-in method</em> tab in the main screen section.</p>
 

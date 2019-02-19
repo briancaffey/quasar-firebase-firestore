@@ -11,7 +11,6 @@
     <q-input
       label="PASSWORD"
       v-model="password"
-      ref="password"
       :type="isPwd ? 'password' : 'text'"
       :error="$v.password.$error"
       @input="delayTouch($v.password, $options.touchMap)"
@@ -96,7 +95,7 @@ export default {
     }
   },
   methods: {
-    authenticate (target) {
+    authenticate () {
       this.loading = true
       this.checkCredentials()
       this.performAuthentication()
@@ -145,7 +144,6 @@ export default {
       }
     },
     performAuthentication () {
-      debugger
       return this.isRegisterUser
         ? this.$registerUser(this.email, this.password)
         : this.$login(this.email, this.password)

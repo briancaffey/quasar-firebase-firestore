@@ -80,8 +80,7 @@ module.exports = function (ctx) {
           loader: 'eslint-loader',
           exclude: /node_modules/
         })
-      },
-      env: { TEST: { apiKey: JSON.stringify('test') } }
+      }
     },
 
     devServer: {

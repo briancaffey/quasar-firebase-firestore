@@ -1,6 +1,8 @@
 <template>
   <q-expansion-item
     expand-separator
+    group="instructions"
+    header-class="bg-primary"
     label="COMMON ISSUES"
   >
     <q-card>
