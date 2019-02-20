@@ -861,10 +861,10 @@
   resolved "https://registry.yarnpkg.com/@posva/vuefire-core/-/vuefire-core-1.0.3.tgz#d439cc315749d08a3045ab97baa25148755d3948"
   integrity sha512-XWk789/LyiiIa8J73IWJBtfgvR6gY2eW/GbGHZgE0jBiVAOOMDHxXbusUP4tQt5Rs9VJXov67PDUzT2WHUxlKg==
 
-"@quasar/app@^1.0.0-beta.0":
-  version "1.0.0-beta.4"
-  resolved "https://registry.yarnpkg.com/@quasar/app/-/app-1.0.0-beta.4.tgz#7df57416566affbc558a5ae90267665c7f67ad4b"
-  integrity sha512-NpnfqxeHomPrbXvVbd/HTfeMzKE7KgxAiFUxAC6V0I/sO0JOYr6OHU5m2uSX+C2jnRECS2CLWLPhZiwmBxi84Q==
+"@quasar/app@^1.0.0-beta.3":
+  version "1.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/@quasar/app/-/app-1.0.0-beta.7.tgz#5418cf5c91a1512019ba4cbf9e9b1232c55675fd"
+  integrity sha512-uz7Q8ojLXZZnOwteDNA6y+mlG+cuDUE9VHDqgWAWmO6Rrlyg4xKUzf88Nf/XxaJgTngyWuDywgwxAe8q1IwZMQ==
   dependencies:
     "@babel/core" "7.2.2"
     "@quasar/babel-preset-app" "^1.0.0"
@@ -880,7 +880,7 @@
     copy-webpack-plugin "4.6.0"
     cross-spawn "6.0.5"
     css-loader "2.1.0"
-    cssnano "4.1.8"
+    cssnano "4.1.10"
     dot-prop "4.2.0"
     elementtree "0.1.7"
     express "4.16.4"
@@ -925,7 +925,7 @@
     vue-template-compiler "2.6.6"
     vuex "3.1.0"
     webpack "4.29.3"
-    webpack-bundle-analyzer "3.0.3"
+    webpack-bundle-analyzer "3.0.4"
     webpack-chain "5.2.0"
     webpack-dev-server "3.1.14"
     webpack-merge "4.2.1"
@@ -2424,7 +2424,7 @@ cssesc@^2.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-2.0.0.tgz#3b13bd1bb1cb36e1bcb5a4dcd27f54c5dcb35703"
   integrity sha512-MsCAG1z9lPdoO/IUMLSBWBSVxVtJ1395VGIQ+Fc2gNdkQ1hNDnQdw3YhA71WJCBW1vdwA0cAnk/DnW6bqoEUYg==
 
-cssnano-preset-default@^4.0.6, cssnano-preset-default@^4.0.7:
+cssnano-preset-default@^4.0.7:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/cssnano-preset-default/-/cssnano-preset-default-4.0.7.tgz#51ec662ccfca0f88b396dcd9679cdb931be17f76"
   integrity sha512-x0YHHx2h6p0fCl1zY9L9roD7rnlltugGu7zXSKQx6k2rYw0Hi3IqxcoAGF7u9Q5w1nt7vK0ulxV8Lo+EvllGsA==
@@ -2482,17 +2482,7 @@ cssnano-util-same-parent@^4.0.0:
   resolved "https://registry.yarnpkg.com/cssnano-util-same-parent/-/cssnano-util-same-parent-4.0.1.tgz#574082fb2859d2db433855835d9a8456ea18bbf3"
   integrity sha512-WcKx5OY+KoSIAxBW6UBBRay1U6vkYheCdjyVNDm85zt5K9mHoGOfsOsqIszfAqrQQFIIKgjh2+FDgIj/zsl21Q==
 
-cssnano@4.1.8:
-  version "4.1.8"
-  resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-4.1.8.tgz#8014989679d5fd42491e4499a521dbfb85c95fd1"
-  integrity sha512-5GIY0VzAHORpbKiL3rMXp4w4M1Ki+XlXgEXyuWXVd3h6hlASb+9Vo76dNP56/elLMVBBsUfusCo1q56uW0UWig==
-  dependencies:
-    cosmiconfig "^5.0.0"
-    cssnano-preset-default "^4.0.6"
-    is-resolvable "^1.0.0"
-    postcss "^7.0.0"
-
-cssnano@^4.1.0:
+cssnano@4.1.10, cssnano@^4.1.0:
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/cssnano/-/cssnano-4.1.10.tgz#0ac41f0b13d13d465487e111b778d42da631b8b2"
   integrity sha512-5wny+F6H4/8RgNlaqab4ktc3e0/blKutmq8yNlBFXA//nSFFAqAngjNVRzUvCgYROULmZZUoosL/KSoZo5aUaQ==
@@ -6239,10 +6229,10 @@ qs@6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-quasar@^1.0.0-beta.0:
-  version "1.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.0.0-beta.2.tgz#ba014e346691e55c3ed637343a464da8bac089e6"
-  integrity sha512-wXM8YA7g9ZXGRNaiRu3aEDfXXr4C1gf+ls/4nXb/hJJwrb8v1J8SXDzJTSOXYzfQMbUcH2FRcl/LgY+JV3ytrQ==
+quasar@^1.0.0-beta.3:
+  version "1.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/quasar/-/quasar-1.0.0-beta.3.tgz#199c8edbb2ec1e844b02f5d106d1fedd9352e8b3"
+  integrity sha512-0KqT10RVdB1WAie0HHyF2Pyx3ldr46xHMeTRuB0scUHWS6KgC9gA3H1WY0j+TYNWqEGD/pYfwM9RvFLpvezNBw==
 
 querystring-es3@^0.2.0:
   version "0.2.1"
@@ -7698,10 +7688,10 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-webpack-bundle-analyzer@3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.0.3.tgz#dbc7fff8f52058b6714a20fddf309d0790e3e0a0"
-  integrity sha512-naLWiRfmtH4UJgtUktRTLw6FdoZJ2RvCR9ePbwM9aRMsS/KjFerkPZG9epEvXRAw5d5oPdrs9+3p+afNjxW8Xw==
+webpack-bundle-analyzer@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.0.4.tgz#095638487a664162f19e3b2fb7e621b7002af4b8"
+  integrity sha512-ggDUgtKuQki4vmc93Ej65GlYxeCUR/0THa7gA+iqAGC2FFAxO+r+RM9sAUa8HWdw4gJ3/NZHX/QUcVgRjdIsDg==
   dependencies:
     acorn "^5.7.3"
     bfj "^6.1.1"

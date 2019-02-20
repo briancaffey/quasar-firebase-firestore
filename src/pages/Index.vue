@@ -11,6 +11,7 @@
       <q-item class="text-subtitle1">- Quasar's New App Extension Featuring -- DotEnv</q-item>
       <q-item class="text-subtitle1">- Vuelidate for form validation</q-item>
       <q-item class="text-subtitle1">- Data Table with expansion item fields, and CRUD operations on our data (coming soon!)</q-item>
+      <q-item class="text-subtitle1">- Quasar App Extension (coming soon!)</q-item>
     </q-list>
 
     <q-list bordered class="q-mt-xl rounded-borders">

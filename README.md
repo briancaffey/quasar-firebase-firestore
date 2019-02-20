@@ -28,5 +28,6 @@ The application should launch on localhost:8080, and from there just start follo
 - Implementation of Vuefire bindings (completed)
 - Use of Quasar App Extension for firebase config -- DotEnv (completed)
 - Data Table with expansion item fields, and CRUD operations on our data (WIP)
+- Quasar App Extension (WIP)
 - e2e testing via cypress (WIP)
 - Unit testing via jest (WIP)

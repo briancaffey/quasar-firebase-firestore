@@ -15,12 +15,12 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "firebase": "^5.8.3",
-    "quasar": "^1.0.0-beta.0",
+    "quasar": "^1.0.0-beta.3",
     "vuefire": "^2.0.0-alpha.20",
     "vuelidate": "^0.7.4"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0-beta.0",
+    "@quasar/app": "^1.0.0-beta.3",
     "@quasar/quasar-app-extension-dotenv": "^1.0.0-beta.2",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
