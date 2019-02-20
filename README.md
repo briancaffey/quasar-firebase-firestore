@@ -4,9 +4,7 @@
 
 > Please note, that in order for this repo to work you must register a new project in the firebase console, and then follow the instructions in the repo to add Quasar's DotEnv app extension, and create your .env files accordingly.
 
-> If you do not register a project and implement your key you will see the index page render, but all subsequent functionality will not work and you will see an error in the console. This is what you'll see in your console.
-
-![Console Error](src/statics/consoleError.jpg?raw=true "Console Error")
+> If you do not register a project and implement your key you will see the index page render, but all subsequent functionality will not work and you will see an error in the console
 
 Clone this repo:
 
