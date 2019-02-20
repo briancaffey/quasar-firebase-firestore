@@ -1,4 +1,4 @@
-# Sample Quasar Application v1-beta Firebase & Firestore (WIP)
+### Sample Quasar Application v1-beta Firebase & Firestore (WIP)
 
 > An opinionated example for firebase & cloud firestore integration:
 
