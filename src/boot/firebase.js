@@ -1,11 +1,11 @@
 // import * as configs from '../utils/firebase/configs.js'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import VueFire from 'vuefire'
+import { firestorePlugin } from 'vuefire'
 require('firebase/auth')
 
 export default ({ app, router, Vue }) => {
-  Vue.use(VueFire)
+  Vue.use(firestorePlugin)
 
   // Initialize app
   const currentConfig = process.env.firebaseConfig
