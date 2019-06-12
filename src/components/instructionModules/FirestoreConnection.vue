@@ -9,7 +9,7 @@
     <q-card>
       <q-card-section>
         <p class="text-body1">
-           With Cloud Firestore, Quasar apps can rely on the clound with just some minor additions to your code base, and harness data reactivity with the <a href="https://github.com/vuejs/vuefire">VueFire plugin</a>. These bindings are sick. They're literally magic under the hood. They were written by one of the core <a href="https://github.com/posva">Vue wizzards</a>, and I'm currently using them in my main development project. Let's start by adding the VueFire package to our project.
+           With Cloud Firestore, Quasar apps can rely on the cloud with just some minor additions to your code base, and harness data reactivity with the <a href="https://github.com/vuejs/vuefire">VueFire plugin</a>. These bindings are sick. They're literally magic under the hood. They were written by one of the core <a href="https://github.com/posva">Vue wizzards</a>, and I'm currently using them in my main development project. Let's start by adding the VueFire package to our project.
            <pre class="bash">$ yarn add vuefire@next</pre>
            Then in our firebase boot file we'll import it, have Vue use it, and then add it to the Vue instance.
            <pre class="bash q-pa-sm"><strong>/src/boot/firebase.js:4</strong>
@@ -61,7 +61,7 @@
     &lt;/form&gt;
         </pre>
         <p class="text-body1">
-          Ok now that we have the magin bindings in place lets get these things working. Once you're able to successfully register a user, you will be routed to the user's dashboard. This file is where we'll start to implement the connections to firestore, and subsequently fetch data, and post to it. Firstly, we create a <em>projects</em> array in our data object and mimic that with a firestore collection binding in our firestore function. Take note, this is a coding theme that you'll see through using firestore.
+          Ok now that we have the magic bindings in place lets get these things working. Once you're able to successfully register a user, you will be routed to the user's dashboard. This file is where we'll start to implement the connections to firestore, and subsequently fetch data, and post to it. Firstly, we create a <em>projects</em> array in our data object and mimic that with a firestore collection binding in our firestore function. Take note, this is a coding theme that you'll see through using firestore.
            <pre class="bash--block q-pa-sm"><strong>/src/components/Dashboard.vue:72-85</strong>
   data () {
     return {
