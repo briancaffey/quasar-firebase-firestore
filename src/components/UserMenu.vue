@@ -6,14 +6,20 @@
       :icon="currentIcon"
     >
       <q-list v-if="!currentUser">
-        <q-item clickable v-close-menu @click="routeClick('login')">
+        <q-item
+          clickable
+          @click="routeClick('login')"
+        >
           <q-item-section avatar>
             <q-icon name="power_settings_new"></q-icon>
           </q-item-section>
           <q-item-section>Login</q-item-section>
         </q-item>
 
-        <q-item clickable v-close-menu @click="routeClick('register')">
+        <q-item
+          clickable
+          @click="routeClick('register')"
+        >
           <q-item-section avatar>
             <q-icon name="person"></q-icon>
           </q-item-section>
@@ -22,7 +28,10 @@
       </q-list>
 
       <q-list v-else>
-        <q-item clickable v-close-menu @click="logOff">
+        <q-item
+          clickable
+          @click="logOff"
+        >
           <q-item-section avatar>
             <q-icon name="exit_to_app"></q-icon>
           </q-item-section>
