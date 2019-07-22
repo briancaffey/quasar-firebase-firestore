@@ -12,7 +12,7 @@
         </p>
 
         <p class="text-body1">
-          In this file I've combined both the user registration and login as the template is only different by one input field; VERIFY PASSWORD. This is also where we see the use of <a href="https://monterail.github.io/vuelidate/">Vuelidate</a> A fellow Quasarian staffer, Scott Molinari, has a great primer article about this great little library where you can read it here: <a href="https://medium.com/quasar-framework/adding-validation-to-quasar-based-forms-5391cee48c20">Adding Validation to Quasar based Forms</a>
+          In this file I've combined both the user registration and login as the template is only different by one input field; VERIFY PASSWORD. This is also where we see the use of <a href="https://monterail.github.io/vuelidate/">Vuelidate</a>. A fellow Quasarian staffer, Scott Molinari, has a great primer article about this great little library where you can read it here: <a href="https://medium.com/quasar-framework/adding-validation-to-quasar-based-forms-5391cee48c20">Adding Validation to Quasar based Forms</a>
         </p>
 
         <p class="text-body1">Combining user needs is sometimes an art when building UI's. In this example I made use of computed properties that hook into vue's routing system to identify which route the user is at which dictates the visablity of the verify password field, the submit's button label, and the heading of the component. Let's take a look at this:
@@ -42,11 +42,11 @@
             <strong>/src/components/Auth.vue:48</strong>
             :label="getAuthType"
           </pre>
-          Now we have two components for the price of one. Let's further this practice in our method calls as well
+          Now we have two components for the price of one. Let's further this practice in our method calls as well.
         </p>
 
         <p class="text-body1">
-          Moving along to our script portion of our SFC. Authentication is handled in this component with two main functions: checkcredentials & authenticate, and two supporting functions: performAuthentication & resetFromFields. Starting in authenticate we'll set our boolean to true to handle the button animation of the spinner gears, and then check our credentials. The checkCredentials method is hooking into our Vuelidate library, and if any erros exist we rely on our trusted Quasar plugin "Notify".
+          Moving along to our script portion of our SFC. Authentication is handled in this component with two main functions: checkCredentials & authenticate, along with two supporting functions: performAuthentication & resetFromFields. Starting in authenticate we'll set our boolean to true to handle the button animation of the spinner gears, and then check our credentials. The checkCredentials method is hooking into our Vuelidate library and, if any errors exist, we rely on our trusted Quasar plugin "Notify".
           <pre class="bash--block q-pa-sm"><strong>/src/components/Auth.vue:70-77</strong>
   checkCredentials () {
     if (this.$v.email.$invalid || this.$v.password.$invalid) {
@@ -80,7 +80,7 @@
         </p>
 
         <p class="text-body1">
-          After our users credentials passed validation it's onto the quick performAuthentication method that will use our computed property again to determin which type of auth method in our Firebast boot file we'll use. Check it out:
+          After our users credentials passed validation it's onto the quick performAuthentication method that will use our computed property again to determine which type of auth method in our Firebase boot file we'll use. Check it out:
           <pre class="bash--block q-pa-sm"><strong>/src/components/Auth.vue:70-77</strong>
   performAuthentication () {
     return this.isRegisterUser
@@ -88,7 +88,7 @@
       : this.$login(this.email, this.password)
   }
           </pre>
-          Because we created those methods in the firebas.js boot file as promises we can then chain the performAuthentication signature inside the authenticate method, and attach some handy "then" and "catch" blocks to handle the rest of our user authentication experience. Once the user is created or logged in we'll call upon the <em>resetFormFields</em> method to set our data props back to empty strings, and tell vuelidate to reset its error handling observations. Here's the full <em>authentication</em> function for viewing:
+          Because we created those methods in the firebase.js boot file as promises, we can then chain the performAuthentication signature inside the authenticate method, and attach some handy "then" and "catch" blocks to handle the rest of our user authentication experience. Once the user is created or logged in we'll call upon the <em>resetFormFields</em> method to set our data props back to empty strings, and tell vuelidate to reset its error handling observations. Here's the full <em>authentication</em> function for viewing:
           <pre class="bash--block q-pa-sm"><strong>/src/components/Auth.vue:70-77</strong>
   authenticate (target) {
     this.loading = true
