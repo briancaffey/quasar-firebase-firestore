@@ -14,7 +14,7 @@ Clone this repo:
 
 `$ yarn`
 
-The application should launch on localhost:8080, and from there just start following the instructions. If you're mostly familiar with Quasar & Firebase, just be sure to follow the instructions in the firebase setup for the use of the new Quasar app extension so you can implement your .env file with you Firebase API keys properly. Then after that feel free to poke around. Again, this is a WIP so there will be some discrepancies. I'll keep updating this over the next week.
+The application should launch on localhost:8080, and from there just start following the instructions. If you're mostly familiar with Quasar & Firebase, just be sure to follow the instructions in the firebase setup for the use of the new Quasar app extension so you can implement your .env file with your Firebase API keys properly. Then after that feel free to poke around. Again, this is a WIP so there will be some discrepancies. I'll keep updating this over the next week.
 
  Features for this repo include:
 
