@@ -20,7 +20,7 @@ The application should launch on localhost:8080, and from there just start follo
 
 - Connection to Firebase SDK (completed)
 - Use of route guards to prevent unauthorized users to protected routes (completed)
-- App initialization from firebase onAuthStatChanged method to allow for the authorized user object to complete before rendering protected routes (completed)
+- App initialization from firebase onAuthStateChanged method to allow for the authorized user object to complete before rendering protected routes (completed)
 - Component renderings based on authorized users (completed)
 - Connection for Cloud Firestore (completed)
 - Implementation of Vuefire bindings (completed)
